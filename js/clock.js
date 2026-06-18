@@ -1,11 +1,3 @@
-// Clock Stuff
-
-// Run the clock immediately when the page loads
-updateClock()
-
-// Refresh the clock every 1000 milliseconds (1 second)
-setInterval(updateClock, 1000)
-
 function updateClock() {
   // Get the current date and time
   const now = new Date()
@@ -21,9 +13,7 @@ function updateClock() {
     hour12: true,
   })
 
-  // Example Output: "02:15:34 PM"
-
-  // 5. Inject the string into your HTML element
+  // Inject the string into your HTML element
   document.getElementById("digital-clock").textContent = timeString
 
   // Update Time Taken Codes
@@ -89,22 +79,4 @@ function parseTime(timeString) {
   // 4. Set the hours and minutes
   date.setHours(hours, minutes, 0, 0)
   return date
-}
-
-// Font Size + & - button event listeners
-document
-  .getElementById("plus")
-  .addEventListener("click", () => adjustRootFontSize(1))
-document
-  .getElementById("minus")
-  .addEventListener("click", () => adjustRootFontSize(-1))
-
-// Adjust the html root font-size when + or - buttons clicked
-function adjustRootFontSize(delta) {
-  let currentFS = document.documentElement.style.fontSize
-
-  // First time, currentFS is the empty string
-  currentFS == "" ? (currentFS = 32) : (currentFS = parseInt(currentFS))
-  currentFS += delta
-  document.documentElement.style.fontSize = currentFS + "px"
 }

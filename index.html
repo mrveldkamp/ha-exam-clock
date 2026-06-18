@@ -8,18 +8,11 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 
-    <script defer src="js/clock.js"></script>
-    <script defer src="js/time-table.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/time-table.js"></script>
+    <script defer src="js/main.js"></script>
   </head>
   <body>
-    <!-- <header>
-      <span>MAIN GYM</span>
-      <span>
-        <a href="#">Print</a>
-        <a href="#">Clock</a>
-      </span>
-    </header> -->
-
     <nav>
       <button id="minus">- Font</button>
       <button id="plus">+ Font</button>
@@ -45,17 +38,7 @@
               <th></th>
             </tr>
           </thead>
-          <tbody class="exam-times">
-            <tr>
-              <td contenteditable="plaintext-only">-------</td>
-              <td contenteditable="plaintext-only">9:00 AM</td>
-              <td contenteditable="plaintext-only">3:00 PM</td>
-              <td>-------</td>
-              <td>
-                <img class="trash" src="img/trashcan.svg" alt="Trashcan" />
-              </td>
-            </tr>
-          </tbody>
+          <tbody class="exam-times"></tbody>
         </table>
         <div>
           <button id="add-row">+</button>
